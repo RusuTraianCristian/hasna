@@ -1,25 +1,5 @@
 import { PaymentProviders } from '@/types';
-import {
-	StripePaymentProcessor,
-	BraintreePaymentProcessor,
-	PayPalPaymentProcessor,
-} from './providers';
-
-const paymentProviders = {
-	Stripe: StripePaymentProcessor,
-	Braintree: BraintreePaymentProcessor,
-	PayPal: PayPalPaymentProcessor,
-};
-
-const paymentProvidersList: PaymentProviders[] = [
-	PaymentProviders.Stripe,
-	PaymentProviders.Braintree,
-	PaymentProviders.PayPal,
-];
-
-export const getPaymentProviders = (): PaymentProviders[] => {
-	return paymentProvidersList;
-};
+import { paymentProviders } from './providers';
 
 class PaymentService {
 	private paymentProcessor;

@@ -1,4 +1,5 @@
-import usePaymentService, { getPaymentProviders } from "@/services/payment/payment.service";
+import usePaymentService from "@/services/payment/payment.service";
+import { getPaymentProviders } from '@/services/payment/providers';
 import { PaymentProviders } from '@/types';
 
 const Payment = () => {
